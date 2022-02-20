@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "username": "pepito",
+      "password": "$2b$10$6Xg3EhIouhgN3rVIZQ6Ew.97WSK03N2CgJTaMLWF1c2eKzHdB6RS2",
+      "id": 1
+    },
+    {
+      "username": "pepito2",
+      "password": "$2b$10$6Xg3EhIouhgN3rVIZQ6Ew.CkenEoOO8FU.K7eLTuq2DQmSn2coB4y",
+      "id": 2
+    },
+    {
+      "username": "juancho",
+      "password": "$2b$10$.pWwBsUu0WGXKmOo9ppMNuOPfHvcXa0UG0QDe5Q1GMq3vYM1Zhxey",
+      "id": 3
+    }
+  ],
+  "anuncios": [
+    {
+      "image": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP731/SP731_display_retina_27in_large.jpg",
+      "nombre": "iMac 2015",
+      "descripcion": "PC de la marca apple en perfecto estado",
+      "precio": "399",
+      "compra/venta": "venta",
+      "userId": 3,
+      "updatedAt": "2022-02-18T11:13:26.638Z",
+      "id": 1
+    },
+    {
+      "image": "https://static.motor.es/fotos-marca/medidas/ford-grand-c-max.jpg",
+      "nombre": "ford grand cmax",
+      "descripcion": "monovolumen en perfecto estado",
+      "precio": "6399",
+      "compraventa": "venta",
+      "userId": 3,
+      "updatedAt": "2022-02-18T11:59:27.719Z",
+      "id": 2
+    },
+    {
+      "image": "https://res.cloudinary.com/grover/image/upload/e_trim/f_auto,q_auto/v1587034843/h2yk0qmyazpa8hr8cqtq.png",
+      "nombre": "iphone SE 2020",
+      "descripcion": "Telefono movil inteligente de la marca Apple, en perfecto estado",
+      "precio": "199",
+      "compraventa": "venta",
+      "userId": 3,
+      "updatedAt": "2022-02-20T17:26:08.988Z",
+      "id": 3
+    },
+    {
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/es/qe55q80aatxxc/gallery/es-qled-q80a-qe55q80aatxxc-526460277?$720_576_PNG$",
+      "nombre": "tv samsung85\"",
+      "descripcion": "se busca televisor marca samsung de 85 pulgadas",
+      "precio": "254",
+      "compraventa": "compra",
+      "userId": 3,
+      "updatedAt": "2022-02-20T17:27:21.047Z",
+      "id": 4
+    },
+    {
+      "image": "https://www.backmarket.es/cdn-cgi/image/format=auto,quality=75,width=640/https://d1eh9yux7w8iql.cloudfront.net/product_images/393295_bd1ad2fc-1a32-48a9-9d7a-3a1cf1f1f798.jpg",
+      "nombre": "thermomix tm5",
+      "descripcion": "se busca robot de cocina en buen estado, precio a convenir",
+      "precio": "1",
+      "compraventa": "compra",
+      "userId": 3,
+      "updatedAt": "2022-02-20T17:28:30.478Z",
+      "id": 5
+    }
+  ]
+}

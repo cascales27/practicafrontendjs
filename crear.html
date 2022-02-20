@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./shared/notification/notification.css">
+    <link rel="stylesheet" href="./shared/spinner/spinner.css">
+    <title>New Anuncio</title>
+</head>
+<body>
+    <main>
+        <div class="notification"></div>
+        <h1>Publicar anuncio nuevo</h1>
+        <form>
+            <div>
+                <label for="imagen">Imagen (URL):</label>
+                <input type="text" name="image" placeholder="Pon aquí la url de tu imagen">
+            </div>
+            <div>
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" name="nombre" required placeholder="Pon aquí el nombre del producto">
+            </div>
+
+            <div>
+                <label for="descripcion">Descripción del producto:</label>
+                <input type="text" name="descripcion" required placeholder="Pon aquí la descripción del producto"> 
+            </div>
+            <div>
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" required placeholder="Pon aquí el precio de tu producto">
+            </div>
+            <div>
+                <label for="compraventa">Compra-venta</label>
+                <input type="text" nombre="Compra o venta" required placeholder="Indica si compras o vendes">
+            </div>
+
+            <button type="submit" disabled>Publicar anuncio nuevo</button>
+        </form>
+
+        <script type="module" src="./anuncio-crear/crear.js"></script>`
+        <script type="module" src="./shared/pubSub.js"></script>
+    </main>
+</body>
+</html>
