@@ -1,6 +1,7 @@
 
 import AnuncioService from "./AnuncioService.js";
-import { buildAnuncioView, buildAnuncioListSpinnerView, buildNotFoundAnunciosView } from "./AnuncioView.js";
+import { 
+    buildAnuncioView, buildAnuncioListSpinnerView, buildNotFoundAnunciosView } from "./AnuncioView.js";
 import { pubSub } from "../shared/pubSub.js";
 
 

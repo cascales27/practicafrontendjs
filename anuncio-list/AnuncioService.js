@@ -91,7 +91,7 @@ export default {
                 descripcion: anuncio.descripcion,
                 precio: anuncio.precio,
                 compraventa: anuncio.compraventa,
-                updatedAt: anuncio.updatedAt,
+                date: anuncio.updateAt,
                 id: anuncio.id,
                 image: anuncio.image || 'https://s03.s3c.es/imag/_v0/770x420/e/c/9/490x_wallapop-logo.jpg',
             };

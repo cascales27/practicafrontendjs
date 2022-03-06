@@ -1,11 +1,11 @@
-import { signupService } from "../signup/SignupService";
-import { pubSub } from "../shared/pubSub";
+import { signupService } from "../signup/SignupService.js";
+import { pubSub } from "../shared/pubSub.js";
 
 export class LoginController {
     constructor(loginFormElement) {
         this.loginFormElement = loginFormElement;
 
-        this.attachEvents()
+        this.attachEvents();
     }
 
     attachEvents() {
@@ -14,12 +14,12 @@ export class LoginController {
     }
 
     onAnyInputChange() {
-        const inputElements = Array.from(this.loginElement.querySelectorAll("input"));
+        const inputElements = Array.from(this.loginFormElement.querySelectorAll("input"));
 
 
         inputElements.forEach((inputElement) => {
            inputElement.addEventListener("input", () => {
-            const areInputsFilled = inputElements.every(inputElement => inputElement.value);
+            const areInputsFilled = inputElements.every((inputElement) => inputElement.value);
 
             if (areInputsFilled) {
                 this.loginFormElement.querySelector("button").removeAttribute("disabled");
@@ -34,10 +34,10 @@ export class LoginController {
         this.loginFormElement.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            const formData = new FormData(thisloginFormElement);
+            const formData = new FormData(this.loginFormElement);
 
             const username = formData.get("user");
-            const username = formData.get("password");
+            const password = formData.get("password");
 
             this.loginUser(username, password);
         });

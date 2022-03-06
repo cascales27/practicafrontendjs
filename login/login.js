@@ -1,8 +1,8 @@
-import { LoginController } from "./LoginController";
+import { LoginController } from "./LoginController.js";
 import { NotificationController } from "../shared/notification/NotificationController.js"
 
-document.addEventListener('DOMContentLoaded', () => {
-    const loginFormElement = document.querySelector('form');
+document.addEventListener("DOMContentLoaded", () => {
+    const loginFormElement = document.querySelector("form");
 
     const notificationElement = document.querySelector(".notification");
 

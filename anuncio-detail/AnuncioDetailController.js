@@ -1,5 +1,5 @@
 import AnuncioService from "../anuncio-list/AnuncioService.js";
-import { buildAnuncioView } from "../anuncio-list/AnuncioView.js";
+import { buildAnuncioDetailView } from "../anuncio-list/AnuncioView.js";
 import { pubSub } from "../shared/pubSub.js"; 
 import { signupService } from "../signup/SignupService.js";
 import { decodeToken } from "../utils/decodeToken.js";
@@ -7,7 +7,7 @@ import { decodeToken } from "../utils/decodeToken.js";
 
 export class AnuncioDetailController {
     constructor(anuncioDetailElement) {
-        this.anuncioDetailController = anuncioDetailElement;
+        this.anuncioDetailElement = anuncioDetailElement;
         this.anuncio = null;
 
         
@@ -20,7 +20,7 @@ export class AnuncioDetailController {
         }
         try {
             this.anuncio = await AnuncioService.getAnuncio(anuncioId);
-            const anuncioTemplate = buildAnuncioView(this.anuncio);
+            const anuncioTemplate = buildAnuncioDetailView(this.anuncio);
 
             this.anuncioDetailElement.innerHTML = anuncioTemplate;
             this.handleDeleteButton();
@@ -33,6 +33,8 @@ export class AnuncioDetailController {
 
     handleDeleteButton() {
        const loggedUserToken = signupService.getLoggedUser();
+
+       
 
        if (loggedUserToken) {
            const userInfo = decodeToken(loggedUserToken);
@@ -50,20 +52,20 @@ export class AnuncioDetailController {
     }
 
     drawDeleteButton() {
-        const buttonElement = document.createElement('button');
-        buttonElement.textContent = 'Borrar anauncio';
+        const buttonElement = document.createElement("button");
+        buttonElement.textContent = "Borrar anuncio";
     
         this.anuncioDetailElement.appendChild(buttonElement);
-        this.AnuncioDetailController.addEventListener('click', () => {
+        this.AnuncioDetailElement.addEventListener("click", () => {
             this.deleteAnuncio();
         });
     
        
     }
     async deleteAnuncio() {
-        const sholuldDelete = window.confirm('Estas seguro de continuar?? Se borrará el anuncio');
+        const shouldDelete = window.confirm('Estas seguro de continuar?? Se borrará el anuncio');
     
-        if ( sholuldDelete) {
+        if ( shouldDelete) {
             try {
                 await AnuncioService.deleteAnuncio(this.anuncio.id);
                 window.location.href = '/';

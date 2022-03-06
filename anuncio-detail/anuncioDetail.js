@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const searchParams = new URLSearchParams(window.location.search);
 
-    const anuncioId = searchParams.get('id');
+    const anuncioId = searchParams.get("id");
 
     const anuncioDetailController = new AnuncioDetailController(anuncioDetailElement);
     anuncioDetailController.showAnuncio(anuncioId);

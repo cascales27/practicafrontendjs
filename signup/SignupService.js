@@ -5,7 +5,7 @@ class SignupService {
         const body = {
             username,
             password,
-        }
+        };
 
         const response = await fetch("http://localhost:8000/auth/register", {
             method: "POST",
