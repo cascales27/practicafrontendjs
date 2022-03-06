@@ -1,5 +1,5 @@
 import { pubSub } from "../shared/pubSub.js";
-import { signupService } from "../SignupService.js";
+import { signupService } from "./SignupService.js";
 
 export class SignupController {
     constructor(formElement) {
@@ -47,7 +47,7 @@ export class SignupController {
             const passwordInput = formData.get('passwordInput');
             const passwordMatchInput = formData.get('passwordMatchInput');
 
-            const arePasswordsEqual = this.checkIfPasswordsAreEqual(passwordInput, passwordMatchInput)
+            const arePasswordsEqual = this.checkIfPasswordsAreEqual(passwordInput, passwordMatchInput);
 
             
             if (!arePasswordsEqual) {
